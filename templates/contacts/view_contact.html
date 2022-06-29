@@ -1,13 +1,5 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h1>All Contacts</h1>
-
-<p><a href="{% url 'add_contact' %}">Add New Contact</a></p>
-
-<div class="flex flex-wrap">
-  {% for contact in contacts %}
-  <div class="w-33 pa3">
+<div class="w-33 pa3">
+    <h1>View contact</h1>
     <h2>{{ contact.name }}</h2>
 
     <div class="flex">
@@ -30,24 +22,23 @@
 
     {% if contact.email %}
     <div class="flex">
-      <div class="pr2"><i class="icofont-ui-email"></i></div>
-      <div>{{ contact.email }}</div>
+        <div class="pr2"><i class="icofont-ui-email"></i></div>
+        <div>{{ contact.email }}</div>
     </div>
     {% endif %}
 
     {% if contact.birthday %}
     <div class="flex">
-      <div class="pr2"><i class="icofont-birthday"></i></div>
-      <div>{{ contact.birthday }}</div>
+        <div class="pr2"><i class="icofont-birthday"></i></div>
+        <div>{{ contact.birthday }}</div>
     </div>
     {% endif %}
 
+    {% for note in notes %}
+    <p>{{ note.text }}</p>
+    {% endfor %}
+
     <p>
-      <a href="{% url 'edit_contact' pk=contact.pk %}">Edit Contact</a><br>  
-      <a href="{% url 'view_contact' pk=contact.pk %}">View Contact</a><br>   
-      <a class="red" href="{% url 'delete_contact' pk=contact.pk %}">Delete Contact</a>
+        <a href="{% url 'add_note_contact' pk=contact.pk %}">Add Note Contact</a><br>    
     </p>
-  </div>
-  {% endfor %}
-</div>  
-{% endblock %}
+</div>

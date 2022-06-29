@@ -19,3 +19,11 @@ class Contact(models.Model):
     city = models.CharField(max_length=255, null=True, blank=True)
     state = USStateField(null=True, blank=True)
     zip_code = USZipCodeField(null=True, blank=True)
+    birthday = models.DateField(null=True, blank=True)
+
+
+class Notes(models.Model):
+    text = models.TextField(max_length=256)
+    date = models.DateTimeField(auto_now_add=True)
+    contact = models.ForeignKey(to='Contact', on_delete=models.CASCADE)
+

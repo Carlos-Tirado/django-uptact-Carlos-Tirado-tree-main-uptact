@@ -39,7 +39,7 @@ django--uptact on  main via 🐍 v3.10.0 (django--uptact)
 
 Note what is in parens at the end -- that's the name of the virtualenv. It shows in the prompt when you are "inside" that virtual environment.
 
-If you need to exit the virtualenv, simply close your terminal window or run `exit`.
+pIf you need to exit the virtualenv, simply close your terminal window or run `exit`.
 
 If you get a `SECRET_KEY` error when you run your django server, you'll need to make sure Django can find that variable, which it is looking for in a `.env` file in the `uptact` project directory (see `django-environ` below). You should create a `.env` file inside the `uptact` project directory. This repo provides a `.env.sample` that you can copy.
 
