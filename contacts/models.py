@@ -20,6 +20,10 @@ class Contact(models.Model):
     state = USStateField(null=True, blank=True)
     zip_code = USZipCodeField(null=True, blank=True)
     birthday = models.DateField(null=True, blank=True)
+    
+    #to see names on django administration
+    def __str__(self):
+        return self.name
 
 
 class Notes(models.Model):
@@ -27,3 +31,4 @@ class Notes(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     contact = models.ForeignKey(to='Contact', on_delete=models.CASCADE)
 
+    

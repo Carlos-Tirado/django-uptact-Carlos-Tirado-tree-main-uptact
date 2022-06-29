@@ -24,7 +24,7 @@ Once you ensure you have Pipenv installed, run the following command inside this
 pipenv install
 ```
 
-Pipenv uses a concept called a "virtualenv" in order to isolate the dependencies of this project from any other project. This requires you to run a command when you want to start working on this project. Before working on the project, run:
+Pipipenpenv uses a concept called a "virtualenv" in order to isolate the dependencies of this project from any other project. This requires you to run a command when you want to start working on this project. Before working on the project, run:
 
 ```
 pipenv shell
@@ -33,7 +33,7 @@ pipenv shell
 This will change your terminal to use the virtualenv for this project. _You must run this command in any new terminal you open._ You will know if you are in the virtualenv because your prompt will change to show you. You should have the name of the virtualenv on your prompt, like the following:
 
 ```
-django--uptact on  main via 🐍 v3.10.0 (django--uptact)
+django--uptact on  main via 🐍 v3.10.0 (django--uptact)pip
 ❯
 ```
 
